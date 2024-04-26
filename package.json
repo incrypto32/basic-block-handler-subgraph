@@ -4,15 +4,17 @@
   "scripts": {
     "codegen": "graph codegen",
     "build": "graph build",
-    "deploy": "graph deploy --node https://api.thegraph.com/deploy/ incrypto32/debug",
+    "deploy": "graph deploy --node https://api.thegraph.com/deploy/ --ipfs https://api.thegraph.com/ipfs/ incrypto32/debug",
     "create-local": "graph create --node http://localhost:8020/ incrypto32/debug",
     "remove-local": "graph remove --node http://localhost:8020/ incrypto32/debug",
-    "deploy-local": "graph deploy --node http://localhost:8020/ --ipfs http://localhost:5001 incrypto32/debug",
+    "deploy-local": "graph deploy --node http://localhost:8020/ --ipfs https://api.thegraph.com/ipfs/ incrypto32/debug",
     "test": "graph test"
   },
   "dependencies": {
-    "@graphprotocol/graph-cli": "0.46.1",
-    "@graphprotocol/graph-ts": "0.29.1"
+    "@graphprotocol/graph-cli": "^0.49.0",
+    "@graphprotocol/graph-ts": "^0.34.0-alpha-20240311104414-5f75d93"
   },
-  "devDependencies": { "matchstick-as": "0.5.0" }
+  "devDependencies": {
+    "matchstick-as": "0.5.0"
+  }
 }

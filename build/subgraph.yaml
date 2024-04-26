@@ -1,12 +1,12 @@
 specVersion: 0.0.5
 schema:
-  file: ./schema.graphql
+  file: schema.graphql
 dataSources:
   - kind: ethereum
     name: Usdc
     network: mainnet
     source:
-      address: '0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48'
+      address: "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48"
       abi: Usdc
       startBlock: 6082461
     mapping:
@@ -17,7 +17,7 @@ dataSources:
         - Balance
       abis:
         - name: Usdc
-          file: ./abis/Usdc.json
+          file: Usdc/abis/Usdc.json
       blockHandlers:
         - handler: handleBlock
-      file: ./src/usdc.ts
+      file: Usdc/Usdc.wasm
